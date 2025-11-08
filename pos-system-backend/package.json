@@ -1,0 +1,11 @@
+{
+  "name": "pos-system-devops",
+  "version": "1.0.0",
+  "description": "my first application without devops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "developer stack",
+  "license": "ISC"
+}
