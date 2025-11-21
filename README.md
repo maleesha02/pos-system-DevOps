@@ -1,0 +1,1 @@
+A full-stack Point of Sale (POS) System built with Node.js, Express, and MongoDB for the backend, and a modern frontend client for managing sales, inventory, and customers. This project demonstrates a complete POS workflow with seamless frontend-backend integration and is ideal for DevOps and deployment practice.
