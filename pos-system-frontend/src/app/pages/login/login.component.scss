@@ -1,0 +1,21 @@
+.context{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 400px;
+    height: 600px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+
+    h4{
+        text-align: center;
+        
+    }
+}
