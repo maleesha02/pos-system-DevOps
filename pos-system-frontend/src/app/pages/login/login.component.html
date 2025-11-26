@@ -1,5 +1,24 @@
 <div class="context">
-    <div class="wrapper">
-        <h4>Login</h4>
-    </div>
+  <div class="wrapper">
+    <h4>Login</h4>
+    <hr>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email"  type="email" matInput
+               placeholder="Ex. pat@example.com">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password"  type="password" matInput
+               placeholder="Ex. 1234">
+      </mat-form-field>
+
+      <button type="submit" [disabled]="form.invalid" class="col-12" mat-button="filled">Login User</button>
+        <p style="text-align: center">OR</p>
+      <button type="button" routerLink="/signup" class="col-12" mat-button="filled">Signup User</button>
+
+    </form>
+  </div>
 </div>

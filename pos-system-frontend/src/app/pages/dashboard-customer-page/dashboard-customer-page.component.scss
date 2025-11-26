@@ -1,0 +1,221 @@
+.customer-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.header-card {
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  mat-card-content {
+    padding: 24px;
+  }
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.title-section {
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .subtitle {
+    margin: 4px 0 0 0;
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+.create-button {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.search-field {
+  width: 100%;
+
+  mat-icon {
+    margin-right: 8px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.table-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  mat-card-content {
+    padding: 0;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  gap: 16px;
+
+  p {
+    color: #666;
+    font-size: 16px;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.customer-table {
+  width: 100%;
+
+  th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  td {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .table-row {
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.customer-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+
+  .name-icon {
+    color: #1976d2;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.salary-cell {
+  .salary-amount {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-radius: 16px;
+    font-weight: 500;
+  }
+}
+
+.contact-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .contact-icon {
+    color: #4caf50;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+
+  button {
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.no-data-cell {
+  text-align: center;
+}
+
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px;
+  gap: 16px;
+
+  .no-data-icon {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    color: #ccc;
+  }
+
+  p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  button mat-icon {
+    margin-right: 8px;
+  }
+}
+
+mat-paginator {
+  border-top: 1px solid #e0e0e0;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .customer-table {
+    font-size: 12px;
+
+    th, td {
+      padding: 12px 8px;
+    }
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
