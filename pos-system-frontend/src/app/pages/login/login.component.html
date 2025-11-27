@@ -2,22 +2,41 @@
   <div class="wrapper">
     <h4>Login</h4>
     <hr>
+
     <form [formGroup]="form" (ngSubmit)="login()">
-      <mat-form-field class="full-width" appearance="outline">
+
+      <!-- Email Field -->
+      <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>Email</mat-label>
-        <input formControlName="email"  type="email" matInput
-               placeholder="Ex. pat@example.com">
+        <input matInput type="email" formControlName="email" placeholder="Ex: pat@example.com">
+
+        @if (form.get('email')?.hasError('email') && !form.get('email')?.hasError('required')) {
+          <mat-error>Please enter a valid email address</mat-error>
+        }
+
+        @if (form.get('email')?.hasError('required')) {
+          <mat-error>Email is <strong>required</strong></mat-error>
+        }
       </mat-form-field>
 
-      <mat-form-field class="full-width" appearance="outline">
+      <!-- Password Field -->
+      <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>Password</mat-label>
-        <input formControlName="password"  type="password" matInput
-               placeholder="Ex. 1234">
+        <input matInput type="password" formControlName="password" placeholder="Enter your password">
+
+        @if (form.get('password')?.hasError('minlength')) {
+          <mat-error>Password must be at least 6 characters</mat-error>
+        }
+
+        @if (form.get('password')?.hasError('required')) {
+          <mat-error>Password is <strong>required</strong></mat-error>
+        }
       </mat-form-field>
 
-      <button type="submit" [disabled]="form.invalid" class="col-12" mat-button="filled">Login User</button>
-        <p style="text-align: center">OR</p>
-      <button type="button" routerLink="/signup" class="col-12" mat-button="filled">Signup User</button>
+      <!-- Submit Button -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        Login
+      </button>
 
     </form>
   </div>
